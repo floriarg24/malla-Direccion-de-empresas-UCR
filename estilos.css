@@ -1,52 +1,55 @@
-.semestre {
-  margin-bottom: 30px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffe6f0;
+  padding: 20px;
+  color: #333;
 }
 
-.semestre h2 {
-  color: deeppink;
-  font-size: 22px;
-  margin-bottom: 10px;
+h1 {
+  color: #cc3366;
+  text-align: center;
 }
 
-.contenedor-materias {
+#malla {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 16px;
+  justify-content: center;
 }
 
-.materia {
-  background: #ffe6f0;
-  padding: 15px;
-  border: 2px solid hotpink;
+.ramo {
+  background-color: #fff0f5;
+  border: 2px solid #cc6699;
   border-radius: 12px;
+  padding: 12px;
   width: 240px;
-  font-weight: bold;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
   position: relative;
-  text-align: center;
-  transition: 0.3s;
 }
 
-.materia.bloqueada {
-  opacity: 0.4;
-  pointer-events: none;
+.ramo h3 {
+  margin-top: 0;
+  color: #b30059;
 }
 
-.materia.aprobada {
-  background-color: #ffd1ec;
-}
-
-.boton-aprobar {
+.ramo button {
   margin-top: 10px;
-  background-color: #ff94c2;
+  padding: 8px 12px;
+  background-color: #ff66b2;
   border: none;
-  padding: 6px 12px;
   border-radius: 8px;
-  cursor: pointer;
   color: white;
+  cursor: pointer;
   font-weight: bold;
 }
 
-.boton-aprobar:hover {
-  background-color: #ff69a6;
+.ramo button:disabled {
+  background-color: #ffcce6;
+  cursor: not-allowed;
 }
 
+.ramo.aprobado {
+  background-color: #fce4ec;
+  border-color: #b30059;
+  opacity: 0.7;
+}
