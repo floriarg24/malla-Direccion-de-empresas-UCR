@@ -1,31 +1,14 @@
-function actualizarCurso(curso, aprobado) {
-  const estado = curso.querySelector('.estado');
-  if (aprobado) {
-    estado.textContent = 'Aprobado';
-    estado.classList.add('aprobado');
-    curso.classList.remove('bloqueado');
-  } else {
-    estado.textContent = 'No aprobado';
-    estado.classList.remove('aprobado');
-    // Solo bloqueamos si tiene requisitos y no están cumplidos
-    const requisitos = curso.getAttribute('data-requisitos')?.split(',').map(r => r.trim()).filter(Boolean) || [];
-    const desbloqueado = requisitos.length === 0 || requisitos.every(req => estadoCursos[req]);
-    curso.classList.toggle('bloqueado', !desbloqueado);
-  }
-}
-
-function actualizarDesbloqueos() {
-  cursos.forEach(curso => {
-    const nombre = curso.getAttribute('data-nombre');
-    const requisitos = curso.getAttribute('data-requisitos')?.split(',').map(r => r.trim()).filter(Boolean) || [];
-
-    // Un curso aprobado siempre está desbloqueado
-    if (estadoCursos[nombre]) {
-      curso.classList.remove('bloqueado');
-    } else {
-      // Para no aprobado, se desbloquea solo si todos los requisitos están aprobados
-      const desbloqueado = requisitos.length === 0 || requisitos.every(req => estadoCursos[req]);
-      curso.classList.toggle('bloqueado', !desbloqueado);
-    }
-  });
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Curricular - Dirección de Empresas</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <h1>Malla Curricular - Dirección de Empresas</h1>
+  <div id="malla"></div>
+  <script src="script.js"></script>
+</body>
+</html>
