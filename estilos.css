@@ -1,56 +1,52 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #ffe6f0;
-  padding: 20px;
-  color: #333;
+.semestre {
+  margin-bottom: 30px;
 }
 
-h1 {
-  color: #cc3366;
-  text-align: center;
+.semestre h2 {
+  color: deeppink;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-#malla {
+.contenedor-materias {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
+  gap: 10px;
 }
 
-.ramo {
-  background-color: #fff0f5;
-  border: 2px solid #cc6699;
+.materia {
+  background: #ffe6f0;
+  padding: 15px;
+  border: 2px solid hotpink;
   border-radius: 12px;
-  padding: 12px;
   width: 240px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  font-weight: bold;
   position: relative;
+  text-align: center;
+  transition: 0.3s;
 }
 
-.ramo h3 {
-  margin-top: 0;
-  color: #b30059;
+.materia.bloqueada {
+  opacity: 0.4;
+  pointer-events: none;
 }
 
-.ramo button {
+.materia.aprobada {
+  background-color: #ffd1ec;
+}
+
+.boton-aprobar {
   margin-top: 10px;
-  padding: 8px 12px;
-  background-color: #ff66b2;
+  background-color: #ff94c2;
   border: none;
+  padding: 6px 12px;
   border-radius: 8px;
-  color: white;
   cursor: pointer;
+  color: white;
   font-weight: bold;
 }
 
-.ramo button:disabled {
-  background-color: #ffcce6;
-  cursor: not-allowed;
-}
-
-.ramo.aprobado {
-  background-color: #fce4ec;
-  border-color: #b30059;
-  opacity: 0.7;
+.boton-aprobar:hover {
+  background-color: #ff69a6;
 }
 
