@@ -1,258 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Malla Curricular Dirección de Empresas</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #ffe4f0;
-    color: #333;
-    padding: 20px;
-  }
-  h2 {
-    color: #d6336c;
-  }
-  .anio, .semestre {
-    margin-bottom: 20px;
-  }
-  .materia {
-    border: 1px solid #d6336c;
-    padding: 10px;
-    margin: 6px 0;
-    border-radius: 5px;
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .materia.bloqueado {
-    opacity: 0.5;
-  }
-  .estado {
-    margin-left: 10px;
-    font-weight: bold;
-  }
-  .estado.aprobado {
-    color: green;
-  }
-  button {
-    background-color: #d6336c;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #a02c57;
-  }
-</style>
-</head>
-<body>
-
-<h1>Malla Curricular Dirección de Empresas</h1>
-
-<div class="anio" id="primerAnio">
-  <h2>Primer Año</h2>
-  <div class="semestre">
-    <h3>I Semestre</h3>
-    <div class="materia" data-nombre="Curso integrado de humanidades I" data-requisitos="">
-      <div>Curso integrado de humanidades I</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Repertorio" data-requisitos="">
-      <div>Repertorio</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Curso de Arte" data-requisitos="">
-      <div>Curso de Arte</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Introduccion a la administración de negocios" data-requisitos="">
-      <div>Introducción a la administración de negocios</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Precálculo" data-requisitos="">
-      <div>Precálculo</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Introducción a la economía" data-requisitos="">
-      <div>Introducción a la economía</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="semestre">
-    <h3>II Semestre</h3>
-    <div class="materia" data-nombre="Curso integrado de humanidades II" data-requisitos="Curso integrado de humanidades I">
-      <div>Curso integrado de humanidades II</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Actividad deportiva" data-requisitos="">
-      <div>Actividad deportiva</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Aplicaciones ofimáticas para la toma de decisiones" data-requisitos="">
-      <div>Aplicaciones ofimáticas para la toma de decisiones</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Contabilidad básica" data-requisitos="Introduccion a la administración de negocios">
-      <div>Contabilidad básica</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Calculo para ciencias economicas I" data-requisitos="Precálculo">
-      <div>Cálculo para ciencias económicas I</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="anio" id="segundoAnio">
-  <h2>Segundo Año</h2>
-  <div class="semestre">
-    <h3>III Semestre</h3>
-    <div class="materia" data-nombre="Administración de proyectos y herramientas para el análisis de datos" data-requisitos="Aplicaciones ofimáticas para la toma de decisiones">
-      <div>Administración de proyectos y herramientas para el análisis de datos</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Estadística general I" data-requisitos="Calculo para ciencias economicas I">
-      <div>Estadística general I</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Contabilidad Intermedia I" data-requisitos="Contabilidad básica">
-      <div>Contabilidad Intermedia I</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Matemática financiera" data-requisitos="Calculo para ciencias economicas I">
-      <div>Matemática financiera</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Cálculo para ciencias economicas II" data-requisitos="Calculo para ciencias economicas I">
-      <div>Cálculo para ciencias económicas II</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="semestre">
-    <h3>IV Semestre</h3>
-    <div class="materia" data-nombre="Metodología de la investigación" data-requisitos="Estadística general I">
-      <div>Metodología de la investigación</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Estadística general II" data-requisitos="Estadística general I, Cálculo para ciencias economicas II">
-      <div>Estadística general II</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Elementos fundamentales de legislación empresarial" data-requisitos="Introduccion a la administración de negocios">
-      <div>Elementos fundamentales de legislación empresarial</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Contabilidad intermedia II" data-requisitos="Contabilidad Intermedia I, Matemática financiera">
-      <div>Contabilidad intermedia II</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Seminario de realidad nacional I" data-requisitos="Curso integrado de humanidades II">
-      <div>Seminario de realidad nacional I</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-    <div class="materia" data-nombre="Administración financiera I" data-requisitos="Matemática financiera">
-      <div>Administración financiera I</div>
-      <div>
-        <span class="estado">No aprobado</span>
-        <button>Alternar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-const cursos = document.querySelectorAll('.materia');
-const estadoCursos = {};
-
-cursos.forEach(curso => {
-  const nombre = curso.getAttribute('data-nombre');
-  const requisitos = curso.getAttribute('data-requisitos')?.split(',').map(r => r.trim()).filter(Boolean) || [];
-
-  const boton = curso.querySelector('button');
-  boton.addEventListener('click', () => {
-    estadoCursos[nombre] = !estadoCursos[nombre];
-    actualizarCurso(curso, estadoCursos[nombre]);
-    actualizarDesbloqueos();
-  });
-
-  // Estado inicial
-  estadoCursos[nombre] = false;
-  actualizarCurso(curso, false);
-});
-
 function actualizarCurso(curso, aprobado) {
   const estado = curso.querySelector('.estado');
-  const requisitos = curso.getAttribute('data-requisitos')?.split(',').map(r => r.trim()).filter(Boolean) || [];
   if (aprobado) {
     estado.textContent = 'Aprobado';
     estado.classList.add('aprobado');
@@ -260,6 +7,8 @@ function actualizarCurso(curso, aprobado) {
   } else {
     estado.textContent = 'No aprobado';
     estado.classList.remove('aprobado');
+    // Solo bloqueamos si tiene requisitos y no están cumplidos
+    const requisitos = curso.getAttribute('data-requisitos')?.split(',').map(r => r.trim()).filter(Boolean) || [];
     const desbloqueado = requisitos.length === 0 || requisitos.every(req => estadoCursos[req]);
     curso.classList.toggle('bloqueado', !desbloqueado);
   }
@@ -270,15 +19,13 @@ function actualizarDesbloqueos() {
     const nombre = curso.getAttribute('data-nombre');
     const requisitos = curso.getAttribute('data-requisitos')?.split(',').map(r => r.trim()).filter(Boolean) || [];
 
+    // Un curso aprobado siempre está desbloqueado
     if (estadoCursos[nombre]) {
       curso.classList.remove('bloqueado');
     } else {
+      // Para no aprobado, se desbloquea solo si todos los requisitos están aprobados
       const desbloqueado = requisitos.length === 0 || requisitos.every(req => estadoCursos[req]);
       curso.classList.toggle('bloqueado', !desbloqueado);
     }
   });
 }
-</script>
-
-</body>
-</html>
