@@ -1,4 +1,4 @@
-const cursos = [
+ const cursos = [
   { nombre: "Curso integrado de humanidades I", id: "hum1", requisitos: [] },
   { nombre: "Repertorio", id: "rep", requisitos: [] },
   { nombre: "Curso de Arte", id: "arte", requisitos: [] },
